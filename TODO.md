@@ -1,0 +1,5 @@
+- [x] Uninstall @nomiclabs/hardhat-etherscan
+- [x] Install @nomicfoundation/hardhat-verify
+- [x] Update hardhat.config.js to import @nomicfoundation/hardhat-verify
+- [x] Update etherscan config to use single API key for V2
+- [ ] Run yarn hardhat deploy --network sepolia to test verification
