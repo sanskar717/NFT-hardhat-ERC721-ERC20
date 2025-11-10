@@ -42,24 +42,6 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
             await vrfCoordinatorV2Mock.fulfillRandomWords(requestId, randomIpfsNft.address)
         }
     })
-
-    // await new Promise(async (resolve, reject) => {
-    //     setTimeout(resolve, 300000)
-    //     randomIpfsNft.once("NftMinted", async function () {
-    //         resolve()
-    //     })
-    //     const randomipfsNftMintTx = await randomIpfsNft.requestNft({ value: mintFee.toString() })
-    //     const randomIpfsNftMinttxReceipt = await randomipfsNftMintTx.wait(1)
-    //     if (developmentChains.includes(network.name)) {
-    //         const requestId = randomIpfsNftMinttxReceipt.events[1].args.requestId.toString()
-    //         const vrfCoordinatorV2MockDeployment = await deployments.get("VRFCoordinatorV2Mock")
-    //         const vrfCoordinatorV2Mock = await ethers.getContractAt(
-    //             "VRFCoordinatorV2Mock",
-    //             vrfCoordinatorV2MockDeployment.address,
-    //         )
-    //         await vrfCoordinatorV2Mock.fulfillRandomWords(requestId, randomIpfsNft.address)
-    //     }
-    // })
     console.log(`Random IPFS NFT index 0 TokenURI: ${await randomIpfsNft.tokenURI(0)}`)
 
     // Dynamic SVG NFT
